@@ -1,0 +1,23 @@
+@media screen and (min-width: 367px) and (max-width: 667px)
+  body
+    background-color: red
+    transition: all 500ms ease
+  @for $i from 1 through 12
+    .col-xs-#{$i}
+      width: 100% * ( $i / 12 )
+
+@media screen and (min-width: 668px) and (max-width: 1024px)
+  body
+    background-color: #6c0000
+    transition: all 500ms ease
+  @for $i from 1 through 12
+    .col-md-#{$i}
+      width: 100% * ( $i / 12 )
+
+@media screen and (min-width: 1024px)
+  body
+    background-color: #ff5b00
+    transition: all 500ms ease
+  @for $i from 1 through 12
+    .col-lg-#{$i}
+      width: 100% * ( $i / 12 )
