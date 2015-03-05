@@ -1,31 +1,106 @@
-nav {
-    background-color: red;
-    color: white;
-    padding: 1em;
+@media all and (min-width: 700px){
+    nav {
+        background-color: red;
+        color: white;
+        padding: 1em;
+    }
+
+    nav div, nav li {
+        display: inline-block;
+    }
+
+    .clearfix::after {
+        content: '';
+        display: block;
+        float: none;
+        clear: both;
+    }
+
+    .brand {
+        font-size: 1.2em;
+        line-height: 1.2em;
+    }
+
+    a.nav-collapse {
+        color: red;
+    }
+
+    nav li {
+        color: #ffb2b5;
+        line-height: 1.44em;
+        cursor: pointer;
+        padding: 0 1em;
+        transition: color 500ms ease;
+    }
+
+    nav li:hover {
+        color: white;
+        transition: color 500ms ease;
+    }
+
+    nav ul {
+        float: right;
+        padding: 0;
+        margin: 0;
+    }
 }
 
-nav div, nav li {
-    display: inline-block;
-}
+@media screen and (max-width: 699px) {
+    nav {
+        background-color: red;
+        color: white;
+        padding: 1em;
+    }
 
-.clearfix::after {
-    content: '';
-    display: block;
-    float: none;
-    clear: both;
-}
+    nav div {
+        display: inline-block;
+    }
 
-.brand {
-    font-size: 1.2em;
-    line-height: 1.2em;
-}
+    .clearfix::after {
+        content: '';
+        display: block;
+        float: none;
+        clear: both;
+    }
 
-a.nav-collapse {
-    display: none;
-}
+    .brand {
+        font-size: 1.2em;
+        line-height: 1.2em;
+    }
 
-nav ul {
-    float: right;
-    padding: 0;
-    margin: 0;
+    a.nav-collapse {
+        display: inline-block;
+        line-height: 1.44em;
+        text-decoration: none;
+        float: right;
+        color: #ffb2b5;
+        transition: 500ms ease;
+    }
+
+    nav li {
+        color: #ffb2b5;
+        line-height: 1.44em;
+        cursor: pointer;
+        padding: 0 1em;
+        transition: color 500ms ease;
+        border-left: 1px solid #ffb2b5;
+        margin: 1em 0;
+    }
+
+    nav li.active {
+        border-left: 3px solid #ffb2b5;
+    }
+
+    a.nav-collapse:hover, nav li:hover {
+        color: white;
+        transition: color 500ms ease;
+    }
+
+    nav ul {
+        display: none;
+        list-style-type: none;
+        padding: 0 0.5em;
+    }
+
+
 }

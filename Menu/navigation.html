@@ -5,13 +5,22 @@
     <title>Burger Icon</title>
     <link rel="stylesheet" href="base.css"/>
     <link rel="stylesheet" href="menu.css"/>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script>
+        $(function () {
+            $('.nav-collapse').click(function (e) {
+                e.preventDefault();
+                $('nav ul.nav-collapse').toggle();
+            });
+        });
+    </script>
 </head>
 <body>
     <nav class="clearfix">
         <div class="brand">GoLiveLabs</div>
         <a href="#" class="nav-collapse">Burger Icon</a>
         <ul class="nav-collapse">
-            <li>Data</li>
+            <li class="active">Data</li>
             <li>Account</li>
         </ul>
     </nav>
